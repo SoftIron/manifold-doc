@@ -69,7 +69,7 @@
                         "Token": []
                     }
                 ],
-                "description": "Get a list of all bare-metal hosts.",
+                "description": "Get a the product name and release for a cluster",
                 "summary": "get hosts",
                 "responses": {
                     "200": {
@@ -11852,7 +11852,9 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/v2/cloud/market/app/{app}/": {
             "patch": {
                 "security": [
                     {
@@ -20165,6 +20167,80 @@
                         }
                     }
                 }
+            },
+            "patch": {
+                "security": [
+                    {
+                        "Token": []
+                    }
+                ],
+                "description": "Rename a datastore and the underlying pool.",
+                "tags": [
+                    "default"
+                ],
+                "summary": "rename datastore",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Existing Datastore Name",
+                        "name": "name",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "423": {
+                        "description": "Locked",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "501": {
+                        "description": "Not Implemented",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "schema": {
+                            "$ref": "#/definitions/sifi.ResponseError"
+                        }
+                    }
+                }
             }
         },
         "/v2/metal/host": {
@@ -20631,7 +20707,7 @@
                         "Token": []
                     }
                 ],
-                "description": "Get a list of all bare-metal hosts.",
+                "description": "Get a the product name and release for a cluster",
                 "tags": [
                     "preview"
                 ],
@@ -32417,7 +32493,9 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/v3/cloud/market/app/{app}/": {
             "patch": {
                 "security": [
                     {

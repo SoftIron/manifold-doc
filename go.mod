@@ -2,7 +2,7 @@ module manifold-doc
 
 go 1.22.1
 
-require git.softiron.com/sw/hc/sifi.git v0.33.0
+require git.softiron.com/sw/hc/sifi.git v0.34.0
 
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
