@@ -2,7 +2,7 @@ module manifold-doc
 
 go 1.22.1
 
-require git.softiron.com/sw/hc/sifi.git v0.40.0
+require git.softiron.com/sw/hc/sifi.git v0.40.1
 
 require (
 	dario.cat/mergo v1.0.0 // indirect

@@ -4,6 +4,8 @@ git.softiron.com/sw/hc/sifi.git v0.34.0 h1:ZWDIpHubhR0qStpfusAJFmAPGq1/Ef17idOaZ
 git.softiron.com/sw/hc/sifi.git v0.34.0/go.mod h1:szRvWC/3OE08uR+rteJ1nJmT0HIH6an+1GJWhGlkq38=
 git.softiron.com/sw/hc/sifi.git v0.40.0 h1:HC5Zhz/N4gDeOilIbu/NeOCQ/mUua6W/F2r2v+6drrk=
 git.softiron.com/sw/hc/sifi.git v0.40.0/go.mod h1:n83DoSBdcAx8wDYHPdxkH+v7c/wtmXxyubbE4bKutPc=
+git.softiron.com/sw/hc/sifi.git v0.40.1 h1:o6iA0fj0Ay3zWmzsEiltpo40CHgakreH41FoVLtG8eM=
+git.softiron.com/sw/hc/sifi.git v0.40.1/go.mod h1:n83DoSBdcAx8wDYHPdxkH+v7c/wtmXxyubbE4bKutPc=
 github.com/KyleBanks/depth v1.2.1 h1:5h8fQADFrWtarTdtDudMmGsC7GPbOAu6RVB3ffsVFHc=
 github.com/KyleBanks/depth v1.2.1/go.mod h1:jzSb9d0L43HxTQfT+oSA1EEp2q+ne2uh6XgeJcm8brE=
 github.com/Microsoft/go-winio v0.5.2/go.mod h1:WpS1mjBmmwHBEWmogvA2mj8546UReBk4v8QkMxJ6pZY=
