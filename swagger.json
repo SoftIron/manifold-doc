@@ -26,14 +26,6 @@
                 ],
                 "description": "Login to the service.",
                 "summary": "Login",
-                "parameters": [
-                    {
-                        "type": "integer",
-                        "description": "Suggested token TTL in minutes",
-                        "name": "ttl",
-                        "in": "query"
-                    }
-                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -35960,6 +35952,9 @@
         "auth.LoginResponse": {
             "type": "object",
             "properties": {
+                "refresh_token": {
+                    "type": "string"
+                },
                 "token": {
                     "type": "string"
                 }
@@ -51599,6 +51594,16 @@
         }
     },
     "securityDefinitions": {
+        "BasicAuth": {
+            "type": "basic"
+        },
+        "Token": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}": {
         "BasicAuth": {
             "type": "basic"
         },
