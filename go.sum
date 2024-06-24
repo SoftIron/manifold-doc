@@ -10,6 +10,10 @@ git.softiron.com/sw/hc/sifi.git v0.43.0 h1:3d57wa5rwv8UVzFa0Cb9VtsXwRl7nLrrAwJgt
 git.softiron.com/sw/hc/sifi.git v0.43.0/go.mod h1:fBz6ZtQVwgy8maxb0OVv6V2DhztrnpOmopAJ90DVY1A=
 git.softiron.com/sw/hc/sifi.git v0.45.0 h1:FOwr74k/oWpXNDZ3LzqByPLGEF2ZVCxWfoYJKggt0oQ=
 git.softiron.com/sw/hc/sifi.git v0.45.0/go.mod h1:kPHK34xOwHAYKK7KA9do0K/3vUrEr1slv0cZYmIpbx4=
+git.softiron.com/sw/hc/sifi.git v0.45.1 h1:TQ/Cqjopf1VcJin7FwwG6yZu//8WKpRQjuiSdD/Hxs4=
+git.softiron.com/sw/hc/sifi.git v0.45.1/go.mod h1:kPHK34xOwHAYKK7KA9do0K/3vUrEr1slv0cZYmIpbx4=
+git.softiron.com/sw/hc/sifi.git v0.45.2 h1:2vGy1YMB3RArmw06F3MsPOjiL8g6E5WlAI8PVMKy2Eg=
+git.softiron.com/sw/hc/sifi.git v0.45.2/go.mod h1:kPHK34xOwHAYKK7KA9do0K/3vUrEr1slv0cZYmIpbx4=
 github.com/KyleBanks/depth v1.2.1 h1:5h8fQADFrWtarTdtDudMmGsC7GPbOAu6RVB3ffsVFHc=
 github.com/KyleBanks/depth v1.2.1/go.mod h1:jzSb9d0L43HxTQfT+oSA1EEp2q+ne2uh6XgeJcm8brE=
 github.com/Microsoft/go-winio v0.5.2/go.mod h1:WpS1mjBmmwHBEWmogvA2mj8546UReBk4v8QkMxJ6pZY=
