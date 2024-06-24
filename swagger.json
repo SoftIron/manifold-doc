@@ -17257,6 +17257,70 @@
                 }
             }
         },
+        "/v2/metal/capacity": {
+            "get": {
+                "security": [
+                    {
+                        "Token": []
+                    }
+                ],
+                "description": "Returns overall capacity metrics for the cluster.",
+                "tags": [
+                    "default"
+                ],
+                "summary": "Get overall capacity metrics for the cluster",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/metal.TotalCapacity"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "423": {
+                        "description": "Locked",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    }
+                }
+            }
+        },
         "/v2/metal/datastore": {
             "post": {
                 "security": [
@@ -35204,6 +35268,70 @@
                 }
             }
         },
+        "/v3-preview/metal/capacity": {
+            "get": {
+                "security": [
+                    {
+                        "Token": []
+                    }
+                ],
+                "description": "Returns overall capacity metrics for the cluster.",
+                "tags": [
+                    "preview"
+                ],
+                "summary": "Get overall capacity metrics for the cluster",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/metal.TotalCapacity"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "423": {
+                        "description": "Locked",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    }
+                }
+            }
+        },
         "/v3-preview/metal/datastore": {
             "post": {
                 "security": [
@@ -35580,6 +35708,70 @@
                         "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/metal.LicenseResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "423": {
+                        "description": "Locked",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "schema": {
+                            "$ref": "#/definitions/manifold.ResponseError"
+                        }
+                    }
+                }
+            }
+        },
+        "/v3-preview/metal/storage": {
+            "get": {
+                "security": [
+                    {
+                        "Token": []
+                    }
+                ],
+                "description": "Returns metrics for the cluster's storage subsystem.",
+                "tags": [
+                    "preview"
+                ],
+                "summary": "Get metrics for the cluster's storage subsystem",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_softiron_manifold-api_metal.SummaryResponse"
                         }
                     },
                     "400": {
@@ -37591,7 +37783,17 @@
             "type": "object",
             "properties": {
                 "auth": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "core",
+                        "public",
+                        "ssh",
+                        "x509",
+                        "ldap",
+                        "server_cipher",
+                        "server_x509",
+                        "custom"
+                    ]
                 },
                 "gids": {
                     "type": "array",
@@ -38805,7 +39007,7 @@
         "github_com_softiron_manifold-api_cloud.InstantiateTemplateResponse": {
             "type": "object",
             "properties": {
-                "template": {
+                "instance": {
                     "type": "integer"
                 }
             }
@@ -51202,6 +51404,9 @@
                         "HEALTH_ERROR"
                     ]
                 },
+                "io_per_sec": {
+                    "type": "integer"
+                },
                 "monitors_in_quorum": {
                     "type": "integer"
                 },
@@ -51227,7 +51432,16 @@
                 "pg_count": {
                     "type": "integer"
                 },
+                "pgs_by_state": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer"
+                    }
+                },
                 "pool_count": {
+                    "type": "integer"
+                },
+                "read_bytes_per_sec": {
                     "type": "integer"
                 },
                 "storage_total_MB": {
@@ -51246,6 +51460,9 @@
                 "version_number": {
                     "description": "The Ceph version",
                     "type": "string"
+                },
+                "write_bytes_per_sec": {
+                    "type": "integer"
                 }
             }
         },
